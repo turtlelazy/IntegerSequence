@@ -4,7 +4,7 @@ public class Range implements IntegerSequence{
   public Range(int start,  int end){  
       this.start = start;
       this.end = end;
-      current = start;
+      current = this.start;
   }
 
   public void reset(){  
@@ -12,11 +12,11 @@ public class Range implements IntegerSequence{
   }
 
   public int length(){
-      return end - start;
+      return end + 1 - start;
     }
 
   public boolean hasNext(){
-      return length() > end-current;
+      return 0 < end-current;
 }
 
   //@throws NoSuchElementException
@@ -25,7 +25,8 @@ public class Range implements IntegerSequence{
           throw new NoSuchElementException();
       }
       else{
-          return current+1;
+          current ++;
+          return current-1;
       }
   }
   
