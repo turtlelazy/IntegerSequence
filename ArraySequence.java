@@ -29,6 +29,12 @@ public class ArraySequence implements IntegerSequence{
           return data[currentIndex - 1];
       }
   }
-  
 
+  public ArraySequence(IntegerSequence otherseq){
+      int[] array = new int[otherseq.length()];
+      for(int i = 0;i<otherseq.length();i++){
+        array[i] = otherseq.next();
+      }
+      data = array;
+  }
 }
