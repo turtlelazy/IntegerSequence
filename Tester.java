@@ -7,6 +7,14 @@ public class Tester{
          System.out.print( ", " );
       }
     }
-    System.out.println();
+    System.out.println("Above is IntegerSequence code. Below is ArraySequence code");
+
+    int[] nums = { 1, 3, 5, 0, -1, 3, 9 };
+    IntegerSequence as = new ArraySequence(nums);
+
+    System.out.println("ArraySequence(array):");
+    while (as.hasNext()) {
+      System.out.print(as.next() + ", ");
+    }
   }
 }
