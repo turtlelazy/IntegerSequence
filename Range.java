@@ -5,6 +5,9 @@ public class Range implements IntegerSequence{
       this.start = start;
       this.end = end;
       current = this.start;
+      if (start>end){
+          throw new IllegalArgumentException();
+      }
   }
 
   public void reset(){  
